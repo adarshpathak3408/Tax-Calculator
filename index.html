@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tax Calculator </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cdc7889c72.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="main">
+
+        <div class="container">
+
+            <div class="container-heading">
+                <h1>Tax Calculator</h1>
+            </div>
+
+            <span id="howItWorksBtn">How It Works?</span>
+
+            <!-- Create a new modal for displaying the details -->
+            <div id="howItWorksModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="modal-heading">How It Works?</h2>
+                    <div class="how-it-works-details">
+                        <p><span><strong> The tax calculation works based on this formula:- </strong></span></p>
+                        <br>
+                        <p><span class="important-text-2">Overall income = Gross Annual Income + Extra Income - Deductions</span></p>
+                        <br>
+                        <br>
+                        <p> <strong>Overall Income (after deductions) under 8 (≤) Lakhs is not taxed </strong></p>
+                        <br>
+                        <p> <strong>Income over 8 (>) Lakhs, the amount over 8 Lakhs is taxed at:- </strong></p>
+                        <ul>
+                            <li>30% for people with age < 40</li>
+                            <li>40% for people with age ≥ 40 but < 60</li>
+                            <li>10% for people with age ≥ 60</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="user-details">
+
+                <form action="#">
+
+                    <label for="annual-income">Enter Gross Annual Income <i class="fas fa-question-circle tooltip"
+                            id="describe-1"></i></label>
+                    <!--tooltip-1 message-->
+                    <div class="tooltip-1">Gross annual income is your total salary in a year before any deduction</div>
+
+                    <input type="text" class="annual-income" name="annual-income" required
+                        placeholder="Enter Gross Annual Income" autocomplete="off">
+
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+
+                    <!-- error message 1 -->
+                    <div class="error-message">
+                        <p>Please enter a valid number</p>
+                    </div>
+
+
+                    <label for="extra-income">Enter Extra Income <i class="fas fa-question-circle tooltip"
+                            id="describe-2"></i></label>
+                    <!--tooltip-2 message-->
+                    <div class="tooltip-2">Extra income is the income that you earn from other sources</div>
+                    <input type="text" class="extra-income" name="extra-income" required
+                        placeholder="Enter Extra Income from other Sources" autocomplete="off">
+
+                    <div class="second-error-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+
+                    <!-- error message 2 -->
+                    <div class="second-error-message">
+                        <p>Please enter a valid number</p>
+                    </div>
+
+
+                    <label for="age-group">Enter Age Group <i class="fas fa-question-circle tooltip"
+                            id="describe-3"></i></label>
+                    <!-- tooltip-3 message -->
+                    <div class="tooltip-3"> Age group is to determine the tax according to the age</div>
+                    <select class="age-group" name="age-group" required>
+                        <option value="" disabled selected>Select Age Group</option>
+                        <option value="<40">&lt;40 (Under 40 Years)</option>
+                        <option value=">=40 & <60">&ge;40 &lt;60 (40 to 59 Years)</option>
+                        <option value=">=60">&ge;60 (60 Years and Above)</option>
+                    </select>
+
+                    <label for="deductions">Enter Total Applicable Deductions <i class="fas fa-question-circle tooltip"
+                            id="describe-4"></i></label>
+                    <!-- tooltip-4 message -->
+                    <div class="tooltip-4">Deductions reduce taxable income by subtracting expenses</div>
+                    <input type="text" class="deductions" name="deductions" required
+                        placeholder="Add Total Applicable Deductions" autocomplete="off">
+
+                    <div class="fourth-error-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+
+                    <!-- error message 4 -->
+                    <div class="fourth-error-message">
+                        <p>Please enter a valid number</p>
+                    </div>
+
+                </form>
+
+                <div class="submit-information">
+                    <button class="submit-btn">Submit</button>
+                </div>
+
+            </div>
+
+
+            <div class="modal-bg" id="modalBg"></div> <!-- Add this line for the modal background layer -->
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="modal-heading">Tax Calculation Result</h2>
+
+                    <div class="results">
+                        <p><strong>Tax Amount:</strong> Rs <span id="taxAmount"></span></p>
+                        <p><strong>Overall Income after Tax Deductions:</strong> Rs <span id="overallIncome"></span>
+                        </p>
+                    </div>
+
+                    <div class="close-button">
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>

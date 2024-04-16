@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 35%;
+    border: 2px solid #ccc;
+    padding: 60px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    transition: transform 0.9s ease, border-radius 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.04);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.container-heading{
+    position: relative;
+    left: 84px;
+    bottom: 38px;
+    width: 274px;
+    font-size: 18px;
+    color: #0000ca;
+    cursor: pointer;
+}
+
+#howItWorksBtn{
+    position: relative;
+    bottom: 30px;
+    left: 77%;
+    cursor: pointer;
+    color: #505050; 
+}
+
+#howItWorksBtn:hover{
+    color: #141414;
+}
+
+
+.important-text-2 {
+    color: rgb(187, 0, 255);
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+}
+
+input,
+select {
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+input::placeholder {
+    font-size: 16px;
+}
+
+.submit-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.user-details {
+    position: relative;
+    top: 15px;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 11.5%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #818181;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.second-error-icon {
+    display: none;
+    position: absolute;
+    top: 32%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #818181;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.fourth-error-icon {
+    display: none;
+    position: absolute;
+    top: 72%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #818181;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.error-icon:hover{
+    color: #565656;
+}
+
+.second-error-icon:hover{
+    color: #565656;
+}
+
+.fourth-error-icon:hover{
+    color: #565656;
+}
+
+.submit-btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    background-color: #2b2bfd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.submit-btn:hover {
+    background-color: #0a0ad7;
+}
+
+.age-group {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    width: 435px;
+    height: 43px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+
+
+/* .modal-bg {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: 60%;
+    backdrop-filter: blur(5px);
+} */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 715px;
+    height: 440px;
+    padding: 45px;
+}
+
+.close {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content {
+    /* height: 50px; */
+    display: flex;
+    padding: 6px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-heading {
+    color: #0000ca;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.results {
+    text-align: center;
+    position: relative;
+    top: 68px;
+}
+
+.results p {
+    font-size: 23px;
+    margin-bottom: 28px;
+}
+
+.modal-content strong {
+    font-weight: bold;
+}
+
+.close-button {
+    position: relative;
+    top: 132px;
+}
+
+.close-btn {
+    font-size: 18px;
+    padding: 10px 55px;
+    background-color: #2b2bfd;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #0a0ad7;
+}
+
+.tooltip {
+    color: #9e9e9e;
+    cursor: pointer;
+}
+
+.tooltip:hover{
+    color: #838282;
+
+}
+
+.tooltip-1 {
+    display: none;
+    position: absolute;
+    width: 548px;
+    font-size: 15px;
+    top: -13px;
+    left: 63%;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.tooltip-2 {
+    display: none;
+    position: absolute;
+    width: 466px;
+    font-size: 15px;
+    top: 86px;
+    left: 46%;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.tooltip-3 {
+    display: none;
+    position: absolute;
+    width: 426px;
+    font-size: 15px;
+    top: 185px;
+    left: 41%;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.tooltip-4 {
+    display: none;
+    position: absolute;
+    width: 465px;
+    font-size: 15px;
+    top: 275px;
+    left: 77%;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.error-message {
+    display: none;
+    position: absolute;
+    width: 240px;
+    font-size: 16px;
+    top: 0px;
+    left: 96%;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.second-error-message {
+    display: none;
+    position: absolute;
+    width: 240px;
+    font-size: 16px;
+    top: 98px;
+    left: 96%;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.fourth-error-message {
+    display: none;
+    position: absolute;
+    width: 240px;
+    font-size: 16px;
+    top: 290px;
+    left: 96%;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.required-field {
+    border: 2.5px solid rgb(255, 0, 0) !important;
+}
