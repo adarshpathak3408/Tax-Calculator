@@ -20,14 +20,14 @@ Before getting started, make sure you have the following installed on your machi
     git clone https://github.com/adarshpathak3408/Tax-Calculator.git
     ```
 
-3. **Open the Project:**
+2. **Open the Project:**
   - Navigate to the project directory using the `cd` command:
 
     ```
     cd tax-estimation-web-tool
     ```
 
-5. **Open the Application:** Once inside the project directory, open the `index.html` file in your preferred web browser.
+3. **Open the Application:** Once inside the project directory, open the `index.html` file in your preferred web browser.
 
 Alternatively, access the live demo [here](https://adarshpathak3408.github.io/Tax-Calculator/).
 
