@@ -76,7 +76,6 @@ select {
     margin-bottom: 20px;
 }
 
-
 input::placeholder {
     font-size: 16px;
 }
@@ -162,22 +161,6 @@ input::placeholder {
     cursor: pointer;
 }
 
-
-
-
-/* .modal-bg {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 60%;
-    height: 60%;
-    backdrop-filter: blur(5px);
-} */
-
 .modal {
     display: none;
     position: fixed;
@@ -211,7 +194,6 @@ input::placeholder {
 }
 
 .modal-content {
-    /* height: 50px; */
     display: flex;
     padding: 6px;
     flex-direction: column;
@@ -358,17 +340,6 @@ input::placeholder {
     padding: 7px;
     border-radius: 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .required-field {
     border: 2.5px solid rgb(255, 0, 0) !important;

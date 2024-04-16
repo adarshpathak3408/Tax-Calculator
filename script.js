@@ -50,70 +50,24 @@ document.querySelector('.fourth-error-icon').addEventListener("mouseleave", () =
 });
 
 
-
-
-
-
-// document.querySelector('.submit-btn').addEventListener('click', function(event) {
-//     event.preventDefault(); // Prevent form submission
-
-//     // Get values from the form
-//     let grossIncome = parseFloat(document.querySelector('.annual-income').value);
-//     let extraIncome = parseFloat(document.querySelector('.extra-income').value);
-//     let deductions = parseFloat(document.querySelector('.deductions').value);
-//     let ageGroup = document.querySelector('.age-group').value;
-
-//     // Calculate overall income after deductions
-//     let overallIncome = grossIncome + extraIncome - deductions;
-
-//     // Initialize tax amount
-//     let tax = 0;
-
-//     // Check if overall income is greater than 8 Lakhs
-//     if (overallIncome > 800000) {
-//         // Calculate taxable amount
-//         let taxableAmount = overallIncome - 800000;
-
-//         // Determine tax rate based on age group
-//         switch (ageGroup) {
-//             case '<40':
-//                 tax = taxableAmount * 0.3; // 30% tax rate
-//                 break;
-//             case '>=40 & <60':
-//                 tax = taxableAmount * 0.4; // 40% tax rate
-//                 break;
-//             case '>=60':
-//                 tax = taxableAmount * 0.1; // 10% tax rate
-//                 break;
-//             default:
-//                 break;
-//         }
-//     }
-
-//     // Display the calculated tax amount
-//     alert('Tax amount: ' + tax.toFixed(2) + ' Lakhs');
-// });
-
-
-
-
-
+// modal for the tax calculation
 
 document.addEventListener('DOMContentLoaded', function () {
   let inputFields = document.querySelectorAll('input, select');
 
-  // Add event listeners to input fields
   inputFields.forEach((inputField) => {
-    inputField.addEventListener('input', function () {
-      // Check if the input field is no longer empty
+    inputField.addEventListener('input', function () 
+    {
+  
       if (this.value.trim() !== "") {
         this.classList.remove('required-field');
       }
     });
+
   });
 
   document.querySelector('.submit-btn').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     // Get values from the form
     let grossIncome = parseFloat(document.querySelector('.annual-income').value);
@@ -121,13 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let deductions = parseFloat(document.querySelector('.deductions').value);
     let ageGroup = document.querySelector('.age-group').value;
 
-    // Check if any input field is empty or not a number
+
     let invalidFields = false;
     if (isNaN(grossIncome) || isNaN(extraIncome) || isNaN(deductions) || ageGroup === "") {
       invalidFields = true;
     }
 
-    // Check if any input field contains non-numeric characters
     if (!isValidNumericInput('.annual-income') || !isValidNumericInput('.extra-income') || !isValidNumericInput('.deductions')) {
       invalidFields = true;
     }
@@ -136,16 +89,14 @@ document.addEventListener('DOMContentLoaded', function () {
     highlightEmptyFields();
 
     if (invalidFields) {
-      return; // Exit the function if any field is invalid
+      return; // Exit the function
     }
 
-    // Calculate overall income after deductions
+    // formula
     let overallIncome = grossIncome + extraIncome - deductions;
 
-    // Initialize tax amount
     let tax = 0;
 
-    // Check if overall income is greater than 8 Lakhs
     if (overallIncome > 800000) {
       // Calculate taxable amount
       let taxableAmount = overallIncome - 800000;
@@ -153,19 +104,18 @@ document.addEventListener('DOMContentLoaded', function () {
       // Determine tax rate based on age group
       switch (ageGroup) {
         case '<40':
-          tax = taxableAmount * 0.3; // 30% tax rate
+          tax = taxableAmount * 0.3;
           break;
         case '>=40 & <60':
-          tax = taxableAmount * 0.4; // 40% tax rate
+          tax = taxableAmount * 0.4; 
           break;
         case '>=60':
-          tax = taxableAmount * 0.1; // 10% tax rate
+          tax = taxableAmount * 0.1; 
           break;
         default:
           break;
       }
 
-      // Deduct tax from overall income
       overallIncome -= tax;
     }
 
@@ -207,29 +157,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
-
-
-// JavaScript code to handle the opening and closing of the modal
+// handle the opening and closing of the second modal
 document.getElementById('howItWorksBtn').addEventListener('click', function() {
-  document.getElementById('howItWorksModal').style.display = 'block';
+    document.getElementById('howItWorksModal').style.display = 'block';
 });
 
 document.querySelector('.close').addEventListener('click', function() {
-  document.getElementById('howItWorksModal').style.display = 'none';
+    document.getElementById('howItWorksModal').style.display = 'none';
 });
-
-
-
-
-
-
-
-
-
-
 
 
 let firstDescribe = document.querySelector("#describe-1");
